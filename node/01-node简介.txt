@@ -1,0 +1,4 @@
+
+NodeJs 是一个开源与跨平台的JavaScript 运行环境。
+
+Node.js 在浏览器外运行 V8 JavaScript 引擎（Google Chrome 的内核）。
