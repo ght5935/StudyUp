@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
         } catch (err) {
             pathRoute['home'](req, res)
         }
-        // res.write(pathname)
+        res.write(pathname)
         res.end()
     }
 })
