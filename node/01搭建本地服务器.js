@@ -7,7 +7,9 @@ const port = 3000
 const server = http.createServer((req, res) => {
     res.statusCode = 200
     res.setHeader("Content-Type", "text/html; charset=utf-8");
-    res.end('哈喽~')
+    if (req.url != './favicon.ico') {
+        res.end('哈喽~')
+    }
 })
 
 server.listen(port, hostname, () => {
@@ -30,3 +32,7 @@ server.listen(port, hostname, () => {
 // ⑦、res.write()。里可以写入响应内容了。
 
 // ⑧、最后就是执行server对象的listen的方法，这个方法可以有个数值参数。指定这个HTTP服务器监听的端口号。server.listen(8080); 我们让他监听8080端口。当我们打开http://localhost:8080的时候，服务器就会接收数据，并且响应数据了。
+
+// supervisor node热更新 用于监听地址的变化
+
+// supervisor 01搭建本地服务器.js 
